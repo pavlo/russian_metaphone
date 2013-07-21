@@ -18,4 +18,9 @@ describe "Normalization Filter" do
     RussianMetaphone::Normalization.filter(source).should == 'мирумир'
   end
 
+  it "should stip Ь and Ъ chars" do
+    RussianMetaphone::Normalization.filter("масянька").should == 'масянка'
+    RussianMetaphone::Normalization.filter("гундосъев").should == 'гундосев'
+  end
+
 end

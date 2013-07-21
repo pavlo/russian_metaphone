@@ -2,8 +2,11 @@
 module RussianMetaphone
   module Normalization
 
+    STRIP_REGEXP = /[ъь]/ 
+
     def filter(string, options = {})
-      Unicode.downcase(string.gsub(/\P{Cyrillic}+/, ''))
+      string = Unicode.downcase(string.gsub(/\P{Cyrillic}+/, ''))
+      string.gsub(STRIP_REGEXP, '')
     end
 
     module_function :filter
