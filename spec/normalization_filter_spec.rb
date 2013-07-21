@@ -4,18 +4,16 @@ require 'spec_helper'
 describe "Normalization Filter" do
 
   it "should join multiple words into one" do
-    source = "привет от старых штиблет"
-    RussianMetaphone::Normalization.filter(source).should == 'приветотстарыхштиблет'
+    RussianMetaphone::Normalization.filter("привет от старых штиблет").should == 'приветотстарыхштиблет'
   end
 
   it "should not allow anything but cyrillic chars" do
-    source = "Привет мир! Hello World!"
-    RussianMetaphone::Normalization.filter(source).should == 'приветмир'
+    RussianMetaphone::Normalization.filter("Привет мир! Hello World!").should == 'приветмир'
   end
 
   it "should downcase things properly" do
     source = "МИРу МИр"
-    RussianMetaphone::Normalization.filter(source).should == 'мирумир'
+    RussianMetaphone::Normalization.filter("МИРу МИр").should == 'мирумир'
   end
 
   it "should stip Ь and Ъ chars" do
