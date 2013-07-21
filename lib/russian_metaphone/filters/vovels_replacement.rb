@@ -2,7 +2,7 @@
 module RussianMetaphone
   module VovelReplacement
 
-    REPLACEMENTS = {/[оыя]/ => "а", /[ю]/ => "y", /[еёэ]/ => "и" }
+    REPLACEMENTS = {/[оыя]/ => 'а', /[ю]/ => 'y', /[еёэ]/ => 'и' }
 
     def filter(string, options = {})
       result = String.new(string)
