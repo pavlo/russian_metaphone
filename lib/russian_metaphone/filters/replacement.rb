@@ -6,12 +6,19 @@
 #  Ю, У             |        У
 #  Е, Ё, Э, И       |        И
 #
-# А также: ЙО, ИО, ЙЕ, ИЕ заменяются на И
+#  ЙО, ИО, ЙЕ, ИЕ заменяются на И
+#  ТС, ДС заменяются на Ц
 #
 module RussianMetaphone
-  module VovelReplacement
+  module Replacement
 
-    REPLACEMENTS = { /йо|ио|йе|ие/ => 'и', /[оыя]/ => 'а', /[ю]/ => 'y', /[еёэ]/ => 'и' }
+    REPLACEMENTS = { 
+      /тс|дс/ => 'ц' , 
+      /йо|ио|йе|ие/ => 'и', 
+      /[оыя]/ => 'а', 
+      /[ю]/ => 'y', 
+      /[еёэ]/ => 'и' 
+    }
 
     def filter(string, options = {})
       result = String.new(string)
