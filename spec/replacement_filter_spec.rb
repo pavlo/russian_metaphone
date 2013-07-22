@@ -14,20 +14,20 @@ require 'spec_helper'
 describe "Replacements Filter" do
   
   it "should not take into account the accent of a word" do
-    RussianMetaphone::Replacement.filter('боян').should == 'баан'
-    RussianMetaphone::Replacement.filter('малюкиёлка').should == 'малyкиилка'
+    RussianMetaphone::Filter::Replacement.filter('боян').should == 'баан'
+    RussianMetaphone::Filter::Replacement.filter('малюкиёлка').should == 'малyкиилка'
   end
 
   it "should replace ЙО, ИО, ЙЕ, ИЕ = И" do
-    RussianMetaphone::Replacement.filter('майонез').should == 'маиниз'
-    RussianMetaphone::Replacement.filter('физиотерапия').should == 'физитирапиа'
-    RussianMetaphone::Replacement.filter('йемен').should == 'имин'
-    RussianMetaphone::Replacement.filter('приключение').should == 'приклyчини'
+    RussianMetaphone::Filter::Replacement.filter('майонез').should == 'маиниз'
+    RussianMetaphone::Filter::Replacement.filter('физиотерапия').should == 'физитирапиа'
+    RussianMetaphone::Filter::Replacement.filter('йемен').should == 'имин'
+    RussianMetaphone::Filter::Replacement.filter('приключение').should == 'приклyчини'
   end
 
   it "should replace ТС, ДС = Ц" do
-    RussianMetaphone::Replacement.filter('безрассудство').should == 'бизрассуцтва'
-    RussianMetaphone::Replacement.filter('детсад').should == 'дицад'
+    RussianMetaphone::Filter::Replacement.filter('безрассудство').should == 'бизрассуцтва'
+    RussianMetaphone::Filter::Replacement.filter('детсад').should == 'дицад'
   end
 end
 

@@ -6,12 +6,12 @@ require "russian_metaphone/filter"
 module RussianMetaphone
   def process(source)
     filters = [
-      RussianMetaphone::Normalization,
-      RussianMetaphone::DuplicatesRemoval,
-      RussianMetaphone::LastnameEnding,
-      RussianMetaphone::Replacement,
-      RussianMetaphone::BreathConsonants,
-      RussianMetaphone::DuplicatesRemoval
+      RussianMetaphone::Filter::Normalization,
+      RussianMetaphone::Filter::DuplicatesRemoval,
+      RussianMetaphone::Filter::LastnameEnding,
+      RussianMetaphone::Filter::Replacement,
+      RussianMetaphone::Filter::BreathConsonants,
+      RussianMetaphone::Filter::DuplicatesRemoval
     ]
     result = String.new(source)
     filters.each { |f| result = f.send(:filter, result) }

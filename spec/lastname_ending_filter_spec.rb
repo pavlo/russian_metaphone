@@ -41,6 +41,6 @@ describe "Lastname Ending Filter" do
 end
 
 def assert_filter(source, expected)
-  RussianMetaphone::LastnameEnding.filter(source).should == expected
+  RussianMetaphone::Filter::LastnameEnding.filter(source).should == expected
 end
 
