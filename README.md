@@ -1,6 +1,6 @@
 # RussianMetaphone
 
-This gem provides an implementation of 'Metaphone' phonetic algorithm adapted for Russian language. Check [this Wikipedia article](http://rubydoc.info/gems/carrierwave/frames) for Metaphone intro.
+This gem provides an implementation of 'Metaphone' phonetic algorithm adapted for Russian language. Check [this Wikipedia article](http://en.wikipedia.org/wiki/Metaphone) for Metaphone intro.
 
 ## Installation
 
