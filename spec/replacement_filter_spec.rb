@@ -29,5 +29,11 @@ describe "Replacements Filter" do
     RussianMetaphone::Filter::Replacement.filter('безрассудство').should == 'бизрассуцтва'
     RussianMetaphone::Filter::Replacement.filter('детсад').should == 'дицад'
   end
+
+  it "should replace Ukrainian characters" do
+    RussianMetaphone::Filter::Replacement.filter('місто').should == 'миста'
+    RussianMetaphone::Filter::Replacement.filter('переїзд').should == 'пириизд'
+    RussianMetaphone::Filter::Replacement.filter('підприємство').should == 'пидпримства'
+  end
 end
 

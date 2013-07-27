@@ -64,11 +64,16 @@ RussianMetaphone имеет готовый набор фильтров для р
 
 Заменяет символы следующим образом:
 
-* ТС, ДС - заменяются на Ц
-* ЙО, ИО, ЙЕ, ИЕ - заменяются на И
-* О, Ы, А, Я - заменяются на А
-* Ю, У - заменяются на У
-* Е, Ё, Э - заменяются на И
+ | Символы | Заменяются на 
+:-------------|:------------:
+ТС, ДС |Ц 
+І, Ї| И
+Є|Е
+ЙО, ИО, ЙЕ, ИЕ|И
+О, Ы, А, Я|A
+Ю, У|У
+Е, Ё, Э, И|И
+
 
 #### RussianMetaphone::Filter::BreathConsonants
 
@@ -82,3 +87,4 @@ RussianMetaphone имеет готовый набор фильтров для р
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
