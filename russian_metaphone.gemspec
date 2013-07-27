@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = RussianMetaphone::VERSION
   gem.authors       = ["Pavlo V. Lysov"]
   gem.email         = ["pavlo@cleverua.com"]
-  gem.description   = %q{Implements the Metaphone phonetic algorithm adapted for Russian language}
-  gem.summary       = %q{Implements the Metaphone phonetic algorithm adapted for Russian language}
-  gem.homepage      = ""
+  gem.description   = %q{Implements 'Metaphone' phonetic algorithm adapted for Russian language}
+  gem.summary       = %q{Implements 'Metaphone' phonetic algorithm adapted for Russian language, allows easy extending and algorithm tuning.}
+  gem.homepage      = "https://github.com/cleverua/russian_metaphone"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
