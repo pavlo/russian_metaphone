@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Implements 'Metaphone' phonetic algorithm adapted for Russian language}
   gem.summary       = %q{Implements 'Metaphone' phonetic algorithm adapted for Russian language, allows easy extending and algorithm tuning.}
   gem.homepage      = "https://github.com/cleverua/russian_metaphone"
+  gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
