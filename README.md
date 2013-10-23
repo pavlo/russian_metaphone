@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-Going to switch to Russian at this point... Drop me a line if you'd like me to translate the Usage section to English...
+Going to switch to Russian at this point, drop me a line if you'd like me to translate the Usage section to English...
 
 Алгоритм русского "Метафон" был предложен Петром Каньковски более 10 лет назад. Именно он и лег в основу этой реализации. Оригинал статьи, за давностью лет, не сохранился, но его можно посмотреть в [архиве](http://web.archive.org/web/20071107145942/http://kankowski.narod.ru/dev/metaphoneru.htm).
 
